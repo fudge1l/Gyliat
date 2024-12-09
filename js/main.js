@@ -1,4 +1,6 @@
 // Сохранение данных при вводе
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+<script src="js/script.js"></script>
 document.querySelectorAll('.editable').forEach(element => {
   const savedValue = localStorage.getItem(element.innerText);
   if (savedValue) {
