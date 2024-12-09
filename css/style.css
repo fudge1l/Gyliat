@@ -2,60 +2,67 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #f9f9f9;
 }
 
 .resume-container {
   width: 80%;
-  margin: auto;
+  margin: 50px auto;
   padding: 20px;
-  background: #f9f9f9;
+  background: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-h1, h2, p {
-  margin: 10px 0;
-  transition: transform 0.2s, background-color 0.2s;
+header, main {
+  margin-bottom: 20px;
 }
 
-h1:focus, h2:focus, p:focus {
-  background-color: #e0f7fa;
+h1, h2, p {
+  margin: 10px 0;
+  padding: 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.editable:focus {
+  background-color: #e3f2fd;
   outline: none;
 }
 
 button {
   padding: 10px 20px;
-  margin-top: 20px;
   border: none;
   background-color: #007BFF;
   color: white;
+  font-size: 16px;
   border-radius: 5px;
   cursor: pointer;
-  position: relative;
   overflow: hidden;
+  position: relative;
 }
 
 button:hover {
   background-color: #0056b3;
 }
 
-/* Ripple effect */
+/* Material Wave (Ripple) Effect */
 button:active::after {
   content: "";
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100px;
-  height: 100px;
-  background: rgba(255, 255, 255, 0.6);
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 255, 255, 0.5);
   border-radius: 50%;
   animation: ripple 0.6s ease-out;
 }
 
 @keyframes ripple {
   from {
-    transform: translate(-50%, -50%) scale(0.1);
+    transform: translate(-50%, -50%) scale(0);
     opacity: 1;
   }
   to {
