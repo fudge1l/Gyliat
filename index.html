@@ -1,35 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Резюме</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аня, пошли гулять!</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            height: 100vh;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin: 20px 0;
+        }
+
+        p {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .gif {
+            width: 300px;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
-  <div class="resume-container">
-    <header>
-      <h1 contenteditable="true" class="editable">Даниил Сухинин</h1>
-      <p contenteditable="true" class="editable">Студент</p>
-      <p contenteditable="true" class="editable">ИА-332</p>
-    </header>
-    <main>
-      <section>
-        <h2 contenteditable="true" class="editable">СибГУТИ</h2>
-        <p contenteditable="true" class="editable">Информатика1 и вычислительная техника</p>
-      </section>
-      <section>
-        <h2 contenteditable="true" class="editable">2 курс</h2>
-        <p contenteditable="true" class="editable">Интернет и информационные технологии</p>
-      </section>
-      <section>
-        <h2 contenteditable="true" class="editable">Лабораторная работа 14</h2>
-        <p contenteditable="true" class="editable">Скачивание файла в формате PDF. Добавление эффекта "Material Wave"</p>
-      </section>
-    </main>
-    <button id="download-btn" class="ripple">Скачать PDF</button>
-  </div>
-  <script src="js/script.js"></script>
+    <img src="gyl.gif" alt="Гифка" class="gif">
+    <h1>Аня, пошли гулять!</h1>
+    <p>Я понимаю, что у тебя могут быть дела, учёба, но я хочу, чтобы мы всё же как-нибудь встретились. Может, получится у тебя выделить хотя бы часик?</p>
+    <img src="maxresdefault.jpg" alt="Картинка">
 </body>
 </html>
