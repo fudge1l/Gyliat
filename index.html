@@ -16,16 +16,19 @@
             margin: 0;
             height: 100vh;
             overflow: hidden; /* Предотвращает прокрутку */
+            box-sizing: border-box;
         }
 
         h1 {
-            font-size: 36px;
+            font-size: 2.5em;
             margin: 20px 0;
+            word-wrap: break-word;
         }
 
         p {
-            font-size: 20px;
+            font-size: 1.25em;
             margin: 10px 0;
+            max-width: 90%;
         }
 
         img {
@@ -34,9 +37,20 @@
         }
 
         .gif {
-            width: 300px;
-            height: auto;
-            margin-top: 20px; /* Добавлен отступ сверху */
+            width: 100%;
+            max-width: 300px;
+            margin-top: 20px;
+        }
+
+        /* Уменьшение шрифта на маленьких экранах */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            p {
+                font-size: 1.1em;
+            }
         }
     </style>
 </head>
