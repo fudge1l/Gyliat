@@ -10,17 +10,15 @@ body, html {
     background-size: cover;
 }
 
-/* Снег */
-.snow {
+/* Canvas для снега */
+#snowCanvas {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    object-fit: cover;
     z-index: 1;
     pointer-events: none;
-    opacity: 0.9;
 }
 
 /* Текст */
@@ -31,7 +29,7 @@ body, html {
     transform: translate(-50%, -50%);
     text-align: center;
     color: black;
-    font-size: 6vw;
+    font-size: clamp(1.5em, 6vw, 3em);
     font-weight: bold;
     text-shadow: 2px 2px 5px rgba(255,255,255,0.7);
     z-index: 3;
@@ -43,8 +41,8 @@ body, html {
     top: 65%;
     left: 50%;
     transform: translateX(-50%);
-    width: 35%;
-    max-width: 350px;
+    width: 40%;
+    max-width: 450px;
     height: auto;
     z-index: 2;
     animation: jump 2s ease-in-out infinite;
