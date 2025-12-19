@@ -4,7 +4,7 @@ const ctx = canvas.getContext('2d');
 let width = canvas.width = window.innerWidth;
 let height = canvas.height = window.innerHeight;
 
-const numFlakes = 150;
+const numFlakes = 300; // стало больше снега
 const flakes = [];
 
 for (let i = 0; i < numFlakes; i++) {
@@ -12,7 +12,7 @@ for (let i = 0; i < numFlakes; i++) {
         x: Math.random() * width,
         y: Math.random() * height,
         radius: Math.random() * 3 + 1,
-        speed: Math.random() * 1 + 0.5
+        speed: Math.random() * 1.5 + 0.5
     });
 }
 
