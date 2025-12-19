@@ -1,3 +1,4 @@
+/* Базовые стили и фон */
 body, html {
     margin: 0;
     padding: 0;
@@ -5,9 +6,12 @@ body, html {
     height: 100%;
     font-family: Arial, sans-serif;
     overflow: hidden;
-    position: relative;
     background: url('background.jpg') no-repeat center center fixed;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 /* Canvas для снега */
@@ -23,48 +27,38 @@ body, html {
 
 /* Текст */
 .text {
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     text-align: center;
     color: black;
-    font-size: clamp(18px, 4vw, 36px); /* безопасный размер */
+    font-size: clamp(18px, 4vw, 36px); /* адаптивный размер */
     font-weight: bold;
     text-shadow: 2px 2px 5px rgba(255,255,255,0.7);
+    max-width: 90%; /* чтобы не вылезал за экран */
+    word-wrap: break-word;
+    margin-bottom: 20px; /* отступ от пандочки */
     z-index: 3;
-    line-height: 1.2;
-    max-width: 90%; /* чтобы текст не вылезал за экран */
-    word-wrap: break-word; /* перенос длинных слов */
 }
 
-/* Панда под текстом */
+/* Панда */
 .panda {
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translateX(-50%);
     width: 35%;
     max-width: 350px;
     height: auto;
-    z-index: 2;
     animation: jump 2s ease-in-out infinite;
+    z-index: 2;
 }
 
 @keyframes jump {
-    0%, 100% { transform: translateX(-50%) translateY(0); }
-    50% { transform: translateX(-50%) translateY(-15px); }
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
 }
 
 /* Адаптивность для мобильных */
-/* Адаптивность для мобильных */
 @media (max-width: 480px) {
     .text {
-        font-size: 5vw; /* чуть больше для маленьких экранов */
-        top: 45%;       /* чуть ниже на экране */
+        font-size: 5vw; /* чуть больше на маленьких экранах */
+        margin-bottom: 30px; /* чуть выше пандочки */
     }
     .panda {
         width: 50%;
-        top: 70%;
     }
 }
